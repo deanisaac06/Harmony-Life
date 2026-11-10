@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "assets": {
+    "image-mw5dr2p6-0srpv1mdf2jl": {
+      "id": "image-mw5dr2p6-0srpv1mdf2jl",
+      "source": "project:images/kids-christmas-group.jpg",
+      "remembered": {},
+      "suggestions": {},
+      "revision": "sha256:cda27c804135f3cdd53747d81e67ac1c98668077ceb72f511bec0f77ac773072",
+      "available": true
+    }
+  },
+  "sources": {
+    "project:images/kids-christmas-group.jpg": {
+      "asset": "image-mw5dr2p6-0srpv1mdf2jl",
+      "kind": "original",
+      "cropToken": null
+    }
+  }
+}
