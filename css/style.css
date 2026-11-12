@@ -520,6 +520,10 @@ section{ padding: 88px 0; }
 .photo-grid.cols-3{ grid-template-columns: repeat(3,1fr); } /* one tall + one wide fills a row exactly */
 @media (max-width: 760px){ .photo-grid{ grid-template-columns: repeat(2,1fr); } .photo-grid .wide{ grid-column: span 2; } }
 
+.about-photo-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:26px; }
+.about-photo-grid img{ width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:var(--radius); }
+@media (max-width:560px){ .about-photo-grid{ grid-template-columns:1fr; } }
+
 /* leadership */
 .people-grid{ display:grid; grid-template-columns: repeat(2,1fr); gap: 40px; }
 .person{ display:grid; grid-template-columns: 160px 1fr; gap: 22px; align-items:start; }
