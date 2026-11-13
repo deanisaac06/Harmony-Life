@@ -545,6 +545,16 @@ section{ padding: 88px 0; }
 .photo-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
 .photo-grid img{ border-radius: var(--radius); aspect-ratio: 3/4; object-fit:cover; width:100%; }
 .photo-grid .wide{ grid-column: span 2; aspect-ratio: 3/2; }
+.monica-house-photo{ display:block; width:100%; max-width: 480px; aspect-ratio: 4/3; object-fit:cover; border-radius: var(--radius); box-shadow: var(--shadow); margin-left: auto; }
+.monica-story{ grid-template-columns: minmax(0, 1.2fr) minmax(260px, 440px); gap: 34px; }
+@media (max-width: 860px){
+  .monica-story{ grid-template-columns: minmax(0, 1fr) minmax(220px, 340px); gap: 24px; }
+  .monica-story .split-media{ margin: 0; }
+}
+@media (max-width: 700px){
+  .monica-story{ grid-template-columns: 1fr; }
+  .monica-story .split-media{ order: 0; }
+}
 .kids-photo-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); }
 .kids-photo-grid img{ aspect-ratio:4/3; }
 .challenge-photo-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
@@ -586,7 +596,7 @@ section{ padding: 88px 0; }
 .news-list .n-title{ font-family: var(--display); font-size: 1.15rem; }
 .news-list .n-date{ font-size: 0.84rem; color: var(--ink-soft); white-space:nowrap; }
 
-.faith-list{ list-style:none; margin:0; padding:0; display:grid; gap: 22px; }
+.faith-list{ list-style:none; margin:0 0 1.1em; padding:0; display:grid; gap: 22px; }
 .faith-list li{ padding-left: 26px; border-left: 2px solid var(--gold); font-family: var(--display); font-style: italic; font-size: 1.12rem; color: var(--ink-soft); }
 .faith-list li strong{ display:block; font-family: var(--body); font-style:normal; font-weight:700; font-size: 0.78rem; text-transform:uppercase; letter-spacing:0.07em; color: var(--brick); margin-top:8px; }
 
