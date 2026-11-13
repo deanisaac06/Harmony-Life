@@ -505,7 +505,7 @@ section{ padding: 88px 0; }
 .split-media img{ border-radius: var(--radius); box-shadow: var(--shadow); width:100%; height:100%; object-fit:cover; }
 .split-media.short img{ aspect-ratio: 4/3; }
 .farm-photo{ overflow:hidden; border-radius:var(--radius); }
-.farm-photo img{ transform:scale(1.18); transform-origin:15% 42%; }
+.farm-photo img{ transform:scale(1.28); transform-origin:5% 42%; }
 @media (max-width: 860px){
   .split-media.thin-mobile img{ aspect-ratio: 16/9; }
 }
