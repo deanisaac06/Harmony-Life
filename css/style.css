@@ -505,12 +505,17 @@ section{ padding: 88px 0; }
 .split.reverse .split-media{ order:2; }
 .split-media img{ border-radius: var(--radius); box-shadow: var(--shadow); width:100%; height:100%; object-fit:cover; }
 .split-media.short img{ aspect-ratio: 4/3; }
+.bed-photo-gallery{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; align-items:center; }
+.bed-photo-gallery img{ display:block; height:auto; aspect-ratio:auto; object-fit:contain; }
 .split-media .kids-feature-photo{ object-position:center 22%; }
 .farm-photo{ overflow:hidden; border-radius:var(--radius); }
 .farm-photo img{ transform:scale(1.28); transform-origin:5% 42%; }
+.farm-food-gallery{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:28px; }
+.farm-food-gallery img{ display:block; width:100%; height:auto; aspect-ratio:auto; object-fit:contain; border-radius:var(--radius); }
 @media (max-width: 860px){
   .split-media.thin-mobile img{ aspect-ratio: 16/9; }
 }
+@media (max-width: 560px){ .farm-food-gallery{ grid-template-columns:1fr; } }
 @media (max-width: 860px){
   .split, .split.reverse{ grid-template-columns: 1fr; gap: 30px; }
   .split.reverse .split-media{ order: 0; }
@@ -545,7 +550,42 @@ section{ padding: 88px 0; }
 .photo-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
 .photo-grid img{ border-radius: var(--radius); aspect-ratio: 3/4; object-fit:cover; width:100%; }
 .photo-grid .wide{ grid-column: span 2; aspect-ratio: 3/2; }
-.photo-grid .elephant-photo{ aspect-ratio: 4/3; object-position: center 38%; }
+.missions-outreach-page .photo-grid .elephant-photo{ grid-column:span 2; height:auto; aspect-ratio:auto; object-fit:contain; object-position:center; }
+.photo-grid .steve-photo{ grid-column: 1 / -1; aspect-ratio: 16/9; }
+
+.missions-outreach-page .photo-grid img{ object-fit:cover; }
+.missions-outreach-page .photo-grid .community-circle-photo,
+.missions-outreach-page .photo-grid .steve-photo{
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  background: none;
+  padding: 0;
+}
+.missions-outreach-page .photo-grid .community-circle-photo{ object-position: center center; grid-column: span 3; }
+.missions-outreach-page .photo-grid .steve-photo{ object-position: center center; grid-column: auto; }
+.missions-outreach-page .photo-grid .mission-gallery-full-image{ object-fit:contain; height:auto; aspect-ratio:auto; }
+.missions-outreach-page .missions-outreach-gallery{ grid-template-columns:repeat(6,minmax(0,1fr)); }
+.missions-outreach-page .missions-outreach-gallery .outreach-crowd-photo,
+.missions-outreach-page .missions-outreach-gallery .coloring-photo{ grid-column:span 4; }
+.missions-outreach-page .missions-outreach-gallery .outreach-street-photo,
+.missions-outreach-page .missions-outreach-gallery .steve-photo,
+.missions-outreach-page .missions-outreach-gallery .market-photo{ grid-column:span 2; }
+.missions-outreach-page .missions-outreach-gallery .prayer-photo{ grid-column:span 4; }
+.missions-outreach-page .missions-outreach-gallery .community-circle-photo,
+.missions-outreach-page .missions-outreach-gallery .selfie-photo{ grid-column:span 3; }
+@media (max-width:760px){
+  .missions-outreach-page .missions-outreach-gallery{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .missions-outreach-page .missions-outreach-gallery .outreach-crowd-photo,
+  .missions-outreach-page .missions-outreach-gallery .prayer-photo{ grid-column:span 2; }
+  .missions-outreach-page .missions-outreach-gallery .outreach-street-photo,
+  .missions-outreach-page .missions-outreach-gallery .steve-photo,
+  .missions-outreach-page .missions-outreach-gallery .market-photo,
+  .missions-outreach-page .missions-outreach-gallery .coloring-photo,
+  .missions-outreach-page .missions-outreach-gallery .community-circle-photo,
+  .missions-outreach-page .missions-outreach-gallery .selfie-photo{ grid-column:auto; }
+}
 .monica-house-photo{ display:block; width:100%; max-width: 480px; aspect-ratio: 4/3; object-fit:cover; border-radius: var(--radius); box-shadow: var(--shadow); margin-left: auto; }
 .monica-story{ grid-template-columns: minmax(0, 1.2fr) minmax(260px, 440px); gap: 34px; }
 @media (max-width: 860px){
@@ -566,9 +606,9 @@ section{ padding: 88px 0; }
 .photo-grid.cols-3{ grid-template-columns: repeat(3,1fr); } /* one tall + one wide fills a row exactly */
 @media (max-width: 760px){ .photo-grid{ grid-template-columns: repeat(2,1fr); } .photo-grid .wide{ grid-column: span 2; } }
 @media (max-width: 760px){ .kids-photo-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } .kids-photo-grid img:last-child{ grid-column:1/-1; aspect-ratio:3/2; } }
-
 .about-photo-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:26px; }
 .about-photo-grid img{ width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:var(--radius); }
+.about-photo-grid .community-circle-photo{ object-fit:contain; background: var(--paper-dim); padding: 8px; }
 @media (max-width:560px){ .about-photo-grid{ grid-template-columns:1fr; } }
 
 /* leadership */
