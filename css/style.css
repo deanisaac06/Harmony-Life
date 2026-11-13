@@ -504,6 +504,8 @@ section{ padding: 88px 0; }
 .split.reverse .split-media{ order:2; }
 .split-media img{ border-radius: var(--radius); box-shadow: var(--shadow); width:100%; height:100%; object-fit:cover; }
 .split-media.short img{ aspect-ratio: 4/3; }
+.farm-photo{ overflow:hidden; border-radius:var(--radius); }
+.farm-photo img{ transform:scale(1.12); transform-origin:35% 42%; }
 @media (max-width: 860px){
   .split-media.thin-mobile img{ aspect-ratio: 16/9; }
 }
@@ -541,6 +543,8 @@ section{ padding: 88px 0; }
 .photo-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
 .photo-grid img{ border-radius: var(--radius); aspect-ratio: 3/4; object-fit:cover; width:100%; }
 .photo-grid .wide{ grid-column: span 2; aspect-ratio: 3/2; }
+.clinic-photo-grid figure{ margin:0; }
+.clinic-photo-grid figcaption{ margin-top:8px; color:rgba(251,244,233,0.78); font-size:0.82rem; line-height:1.4; }
 .photo-grid.cols-3{ grid-template-columns: repeat(3,1fr); } /* one tall + one wide fills a row exactly */
 @media (max-width: 760px){ .photo-grid{ grid-template-columns: repeat(2,1fr); } .photo-grid .wide{ grid-column: span 2; } }
 
@@ -551,11 +555,14 @@ section{ padding: 88px 0; }
 /* leadership */
 .people-grid{ display:grid; grid-template-columns: repeat(2,1fr); gap: 40px; }
 .person{ display:grid; grid-template-columns: 160px 1fr; gap: 22px; align-items:start; }
-.person img{ border-radius: var(--radius); aspect-ratio: 1/1; object-fit:cover; box-shadow: var(--shadow); }
+.person-photo{ width:160px; aspect-ratio:1/1; overflow:hidden; border-radius:var(--radius); box-shadow:var(--shadow); }
+.person-photo img{ display:block; width:100%; height:100%; object-fit:cover; }
+.person-photo .anne-photo{ object-position:center top; }
+.person-photo .ken-photo{ transform:scale(1.12); }
 .person h3{ font-size: 1.2rem; margin-bottom:2px; }
 .person .role{ color: var(--brick); font-weight:700; font-size: 0.82rem; text-transform:uppercase; letter-spacing:0.06em; margin-bottom: 10px; display:block; }
 @media (max-width: 700px){ .people-grid{ grid-template-columns: 1fr; } }
-@media (max-width: 460px){ .person{ grid-template-columns: 100px 1fr; } }
+@media (max-width: 460px){ .person{ grid-template-columns: 100px 1fr; } .person-photo{ width:100px; } }
 
 /* forms / contact */
 .contact-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 56px; }
