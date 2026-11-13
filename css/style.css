@@ -545,6 +545,7 @@ section{ padding: 88px 0; }
 .photo-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
 .photo-grid img{ border-radius: var(--radius); aspect-ratio: 3/4; object-fit:cover; width:100%; }
 .photo-grid .wide{ grid-column: span 2; aspect-ratio: 3/2; }
+.photo-grid .elephant-photo{ aspect-ratio: 4/3; object-position: center 38%; }
 .monica-house-photo{ display:block; width:100%; max-width: 480px; aspect-ratio: 4/3; object-fit:cover; border-radius: var(--radius); box-shadow: var(--shadow); margin-left: auto; }
 .monica-story{ grid-template-columns: minmax(0, 1.2fr) minmax(260px, 440px); gap: 34px; }
 @media (max-width: 860px){
