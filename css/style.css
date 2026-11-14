@@ -566,15 +566,17 @@ section{ padding: 88px 0; }
 .missions-outreach-page .photo-grid .community-circle-photo{ object-position: center center; grid-column: span 3; }
 .missions-outreach-page .photo-grid .steve-photo{ object-position: center center; grid-column: auto; }
 .missions-outreach-page .photo-grid .mission-gallery-full-image{ object-fit:contain; height:auto; aspect-ratio:auto; }
-.missions-outreach-page .missions-outreach-gallery{ grid-template-columns:repeat(6,minmax(0,1fr)); }
+.missions-outreach-page .missions-outreach-gallery{ grid-template-columns:repeat(12,minmax(0,1fr)); }
 .missions-outreach-page .missions-outreach-gallery .outreach-crowd-photo,
-.missions-outreach-page .missions-outreach-gallery .coloring-photo{ grid-column:span 4; }
+.missions-outreach-page .missions-outreach-gallery .coloring-photo{ grid-column:span 8; }
 .missions-outreach-page .missions-outreach-gallery .outreach-street-photo,
 .missions-outreach-page .missions-outreach-gallery .steve-photo,
-.missions-outreach-page .missions-outreach-gallery .market-photo{ grid-column:span 2; }
-.missions-outreach-page .missions-outreach-gallery .prayer-photo{ grid-column:span 4; }
+.missions-outreach-page .missions-outreach-gallery .market-photo{ grid-column:span 4; }
+.missions-outreach-page .missions-outreach-gallery .prayer-photo{ grid-column:span 8; }
 .missions-outreach-page .missions-outreach-gallery .community-circle-photo,
-.missions-outreach-page .missions-outreach-gallery .selfie-photo{ grid-column:span 3; }
+.missions-outreach-page .missions-outreach-gallery .selfie-photo{ grid-column:span 6; }
+/* closing row: four equal photos spanning the full width */
+.missions-outreach-page .missions-outreach-gallery .trip-photo{ grid-column:span 3; aspect-ratio:3/4; object-fit:cover; }
 @media (max-width:760px){
   .missions-outreach-page .missions-outreach-gallery{ grid-template-columns:repeat(2,minmax(0,1fr)); }
   .missions-outreach-page .missions-outreach-gallery .outreach-crowd-photo,
@@ -584,7 +586,8 @@ section{ padding: 88px 0; }
   .missions-outreach-page .missions-outreach-gallery .market-photo,
   .missions-outreach-page .missions-outreach-gallery .coloring-photo,
   .missions-outreach-page .missions-outreach-gallery .community-circle-photo,
-  .missions-outreach-page .missions-outreach-gallery .selfie-photo{ grid-column:auto; }
+  .missions-outreach-page .missions-outreach-gallery .selfie-photo,
+  .missions-outreach-page .missions-outreach-gallery .trip-photo{ grid-column:auto; }
 }
 .monica-house-photo{ display:block; width:100%; max-width: 480px; aspect-ratio: 4/3; object-fit:cover; border-radius: var(--radius); box-shadow: var(--shadow); margin-left: auto; }
 .monica-story{ grid-template-columns: minmax(0, 1.2fr) minmax(260px, 440px); gap: 34px; }
